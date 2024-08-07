@@ -1,0 +1,25 @@
+#bbs1{
+    border-radius: 3px;
+    background-color: aquamarine;
+}
+#bbs2{
+    border-radius: 3px;
+    background-color: rgb(149, 82, 157);
+}
+#bbs3{
+    border-radius: 3px;
+    background-color: rgb(171, 90, 90);
+}
+body{
+    text-align: center;
+    background-color: black;
+}
+#display{
+    width: 450px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: gold;
+}
+#heading{
+    color: greenyellow;
+}

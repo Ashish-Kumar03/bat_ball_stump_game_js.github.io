@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏏 BAT - BALL - STUMP GAME</title>
+    <link rel="stylesheet" href="bat_ball_stump_game.css" />
+  </head>
+  <body>
+    <h1 id="heading">🏏 BAT - BALL - STUMP Game</h1>
+    <div id="game">
+      <input id="display" type="text" readonly /> <br />
+      <br />
+      <br />
+      <button
+        id="bbs1"
+        onclick="
+        let computerChoice;
+        let userMsg;
+      let randomNumber = Math.random() * 3;
+      if(randomNumber > 0 && randomNumber <=1){
+        computerChoice = 'BAT';}
+      else if(randomNumber > 1 && randomNumber <= 2){
+        computerChoice = 'BALL';}
+      else {
+        computerChoice = 'STUMP';} 
+        if(computerChoice === 'BAT'){
+        userMsg = `It's a tie.`;}
+        else if(computerChoice === 'BALL'){
+        userMsg = `You have won.`;}
+        else if(computerChoice === 'STUMP'){
+        userMsg = `Computer has won.`;
+        }
+        let resultMsg = `You have chosen BAT. Computer has chosen ${computerChoice}. ${userMsg}`;
+        document.querySelector('#display').value = resultMsg;
+      "
+      >
+        BAT
+      </button>
+      <button
+        id="bbs2"
+        onclick="
+      //let computerChoice;
+        //let userMsg;
+       randomNumber = Math.random() * 3;
+      if(randomNumber > 0 && randomNumber <=1){
+        computerChoice = 'BAT';}
+      else if(randomNumber > 1 && randomNumber <= 2){
+        computerChoice = 'BALL';}
+      else {
+        computerChoice = 'STUMP';} 
+        if(computerChoice === 'BAT'){
+        userMsg = `Computer has won.`;}
+        else if(computerChoice === 'BALL'){
+        userMsg = `It's a tie.`;}
+        else if(computerChoice === 'STUMP'){
+        userMsg = `You have won.`;
+        }
+        resultMsg = `You have chosen BALL. Computer has chosen ${computerChoice}. ${userMsg}`;
+        document.querySelector('#display').value = resultMsg;
+      "
+      >
+        BALL
+      </button>
+      <button
+        id="bbs3"
+        onclick="
+      randomNumber = Math.random() * 3;
+      if(randomNumber > 0 && randomNumber <=1){
+        computerChoice = 'BAT';}
+      else if(randomNumber > 1 && randomNumber <= 2){
+        computerChoice = 'BALL';}
+      else {
+        computerChoice = 'STUMP';} 
+        if(computerChoice === 'BAT'){
+        userMsg = `You have won.`;}
+        else if(computerChoice === 'BALL'){
+        userMsg = `Computer has won.`;}
+        else if(computerChoice === 'STUMP'){
+        userMsg = `It's a tie.`;
+        }
+        resultMsg = `You have chosen STUMP. Computer has chosen ${computerChoice}. ${userMsg}`;
+        document.querySelector('#display').value = resultMsg;
+      "
+      >
+        STUMP
+      </button>
+      <script>
+        document.querySelector("#display").value = resultMsg;
+      </script>
+    </div>
+  </body>
+</html>
