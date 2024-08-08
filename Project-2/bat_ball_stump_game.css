@@ -15,7 +15,8 @@ body{
     background-color: black;
 }
 #display{
-    width: 450px;
+    text-align: center;
+    width: 750px;
     height: 30px;
     border-radius: 4px;
     background-color: gold;

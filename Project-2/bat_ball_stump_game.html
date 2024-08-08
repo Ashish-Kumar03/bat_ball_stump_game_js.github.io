@@ -25,14 +25,17 @@
       else {
         computerChoice = 'STUMP';} 
         if(computerChoice === 'BAT'){
+        score.tie++;
         userMsg = `It's a tie.`;}
         else if(computerChoice === 'BALL'){
+        score.win++;
         userMsg = `You have won.`;}
         else if(computerChoice === 'STUMP'){
+        score.lost++;
         userMsg = `Computer has won.`;
         }
         let resultMsg = `You have chosen BAT. Computer has chosen ${computerChoice}. ${userMsg}`;
-        document.querySelector('#display').value = resultMsg;
+        document.querySelector('#display').value = `${resultMsg}  Scores -> Won : ${score.win}  Lost : ${score.lost}  Tied : ${score.tie}`;
       "
       >
         BAT
@@ -50,14 +53,17 @@
       else {
         computerChoice = 'STUMP';} 
         if(computerChoice === 'BAT'){
+        score.lost++;
         userMsg = `Computer has won.`;}
         else if(computerChoice === 'BALL'){
+        score.tie++;
         userMsg = `It's a tie.`;}
         else if(computerChoice === 'STUMP'){
+        score.win++;
         userMsg = `You have won.`;
         }
         resultMsg = `You have chosen BALL. Computer has chosen ${computerChoice}. ${userMsg}`;
-        document.querySelector('#display').value = resultMsg;
+        document.querySelector('#display').value = `${resultMsg}  Scores -> Won : ${score.win}  Lost : ${score.lost}  Tied : ${score.tie}`;
       "
       >
         BALL
@@ -73,19 +79,27 @@
       else {
         computerChoice = 'STUMP';} 
         if(computerChoice === 'BAT'){
+        score.win++;
         userMsg = `You have won.`;}
         else if(computerChoice === 'BALL'){
+        score.lost++;
         userMsg = `Computer has won.`;}
         else if(computerChoice === 'STUMP'){
+        score.tie++;
         userMsg = `It's a tie.`;
         }
         resultMsg = `You have chosen STUMP. Computer has chosen ${computerChoice}. ${userMsg}`;
-        document.querySelector('#display').value = resultMsg;
+        document.querySelector('#display').value = `${resultMsg}  Scores -> Won : ${score.win}  Lost : ${score.lost}  Tied : ${score.tie}`;
       "
       >
         STUMP
       </button>
       <script>
+        let score = {
+          win: 0,
+          lost: 0,
+          tie: 0,
+        };
         document.querySelector("#display").value = resultMsg;
       </script>
     </div>
